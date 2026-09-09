@@ -1,0 +1,47 @@
+body {
+  background-color: #f7e8eb;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+img[alt="profil"] {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.kotak {
+  background-color: #f9f3f3;
+  border: 1px solid #605c5c;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 15px;
+  vertical-align: center;
+}
+
+table img {
+  width: 350px;
+  height: auto;
+}
