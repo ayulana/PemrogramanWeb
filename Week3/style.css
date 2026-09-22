@@ -57,10 +57,10 @@ header {
 
 .header-brand img {
   height: 50px;
-  width: 50px;
+  width: auto;
   object-fit: contain;
   background: var(--putih);
-  border-radius: 50%;
+  border-radius: 0px;
   padding: 3px;
 }
 
