@@ -1,1 +1,373 @@
+:root {
+  --biru-tua: #0d3b66;
+  --biru: #14539a;
+  --biru-muda: #1f6fb2;
+  --kuning: #ffcb05;
+  --kuning-tua: #e0a800;
+  --putih: #ffffff;
+  --abu: #f4f6f9;
+  --teks: #222222;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--teks);
+  background-color: var(--abu);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+
+header {
+  background-color: var(--biru-tua);
+  color: var(--putih);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-brand img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  background: var(--putih);
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.header-brand h1 {
+  font-size: 1.2rem;
+  color: var(--kuning);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--putih);
+  font-weight: 600;
+  padding: 6px 4px;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--kuning);
+  border-color: var(--kuning);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--putih);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    display: none;
+  }
+  nav.show {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+}
+
+.hero {
+  position: relative;
+  min-height: 480px;
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(13,59,102,0.1) 0%, rgba(13,59,102,0.75) 100%);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: var(--putih);
+  text-align: right;
+  padding: 30px 50px;
+  max-width: 550px;
+}
+
+.hero-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: var(--kuning);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+  }
+  .hero-text {
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+.section {
+  padding: 60px 8%;
+}
+
+.section h2.judul-section {
+  text-align: center;
+  color: var(--biru-tua);
+  margin-bottom: 35px;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.section h2.judul-section::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: var(--kuning);
+  margin: 10px auto 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.tampil {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  background-color: var(--biru-tua);
+  color: var(--putih);
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+footer .footer-alamat {
+  font-size: 0.9rem;
+  max-width: 400px;
+}
+
+footer .footer-copyright {
+  font-size: 0.85rem;
+  color: var(--kuning);
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .footer-copyright {
+    text-align: center;
+  }
+}
+
+.profil-box {
+  background: var(--putih);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  border-left: 6px solid var(--kuning);
+}
+
+.visi-misi ul, .visi-misi ol {
+  margin-top: 10px;
+}
+
+.jurusan-item {
+  background: var(--putih);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.jurusan-item h2 {
+  color: var(--biru-tua);
+  margin-bottom: 8px;
+}
+
+table.ekskul-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--putih);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table.ekskul-table th {
+  background: var(--biru);
+  color: var(--putih);
+  padding: 12px;
+  text-align: left;
+}
+
+table.ekskul-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+table.ekskul-table tr:hover td {
+  background: var(--abu);
+}
+
+.kontak-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .kontak-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+form.form-kontak {
+  background: var(--putih);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form.form-kontak label {
+  font-weight: 600;
+  margin-bottom: -8px;
+  color: var(--biru-tua);
+}
+
+form.form-kontak input,
+form.form-kontak textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form.form-kontak textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form.form-kontak button {
+  background: var(--kuning);
+  color: var(--biru-tua);
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form.form-kontak button:hover {
+  background: var(--kuning-tua);
+}
+
+.sosmed-list {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.sosmed-list li {
+  margin-bottom: 12px;
+}
+
+.sosmed-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--biru);
+  font-weight: 600;
+}
+
+.sosmed-list a:hover {
+  color: var(--kuning-tua);
+}
+
+.maps-container {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.maps-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
