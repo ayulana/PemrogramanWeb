@@ -211,6 +211,12 @@ footer .footer-copyright {
   border-left: 6px solid var(--kuning);
 }
 
+.profil-box p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
 .visi-misi ul, .visi-misi ol {
   margin-top: 10px;
 }
