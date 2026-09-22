@@ -18,6 +18,7 @@ Selain itu, saya juga menggunakan atribut `class` sebagai penanda elemen yang ak
 Pada penerapan CSS, saya menggunakan selector tag, class, atribut, warna, ukuran gambar, posisi text, hingga penataan untuk bagian `body`.
 
 Berikut merupakan overview dari website yang telah saya buat.
+
 ![](img/overview1.png)
 ![](img/overview2.png)
 ![](img/overview3.png)
