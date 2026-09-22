@@ -3,7 +3,7 @@
 - NRP: 5025251064
 - Kelas: Pemrograman Web B
 
-![](image/overview.png)
+![](image/preview.png)
 
 Pada pertemuan 3 ini kami mempelajari tools pengembangan web. Materi pembelajaran yang disampaikan adalah konsep client-server, front-end & back-end, tools pengembangan web, dan struktur dasar aplikasi web. Dari pembelajaran di kelas, terdapat latihan studi kasus untuk membuat website masing-masing sekolah asal. Disini saya membuat website SMAN 6 Surabaya.
 
