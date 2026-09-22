@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAN 6 Surabaya - Kesiswaan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <div class="header-brand">
+      <img src="images/logo.png">
+      <h1>SMAN 6 Surabaya</h1>
+    </div>
+    <button class="menu-toggle">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="index.html#profil">Profil</a></li>
+        <li><a href="kesiswaan.html" class="active">Kesiswaan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h2 class="judul-section reveal">Hubungi Kami</h2>
+
+    <div class="kontak-wrapper">
+
+      <form class="form-kontak reveal" action="#" method="post">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" placeholder="Tulis pesan di sini" required></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+      </form>
+
+      <div class="reveal">
+        <div class="profil-box">
+          <h3>Media Sosial &amp; Website</h3>
+          <ul class="sosmed-list">
+            <li>
+              <a href="https://www.instagram.com/sman6_sby/?hl=en" target="_blank">
+                Instagram: @sman6_sby
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/school/sman6surabaya" target="_blank">
+                LinkedIn: SMAN 6 Surabaya
+              </a>
+            </li>
+            <li>
+              <a href="https://sman6sby.sch.id" target="_blank">
+                Website: sman6sby.sch.id
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="maps-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7989008230556!2d112.
+            74441660000001!3d-7.263712899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7
+            f961668a5141%3A0x2ef2eb37027954b2!2sSenior%20High%20School%20State%206%20of%20Surabaya!5e0!3m2!1sen!2sid!4v1790089302129!5m2!1sen!2sid" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-alamat">
+      Jl. Gubernur Suryo No.11, Embong Kaliasin, Kec. Genteng, Surabaya, Jawa Timur 60271<br>
+      Telp: (031) 5345974 | Email: smanamsurabaya@yahoo.com
+    </div>
+    <div class="footer-copyright">
+      &copy; 2026. Semua Hak Cipta Dilindungi.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
