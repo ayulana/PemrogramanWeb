@@ -1,10 +1,14 @@
-# Website Sekolah Asal
+# Website SMAN 6 Surabaya
 - Nama: Mas Ayu Lana afiah
 - NRP: 5025251064
 - Kelas: Pemrograman Web B
 
 
 Pada pertemuan 3 ini kami mempelajari tools pengembangan web. Materi pembelajaran yang disampaikan adalah konsep client-server, front-end & back-end, tools pengembangan web, dan struktur dasar aplikasi web. Dari pembelajaran di kelas, terdapat latihan studi kasus untuk membuat website masing-masing sekolah asal. Disini saya membuat website SMAN 6 Surabaya.
+
+Website yang saya buat berisi gambaran singkat SMAN 6 Surabaya. Terdapat profile sekolah yang berisi sejarah, visi, dan misi SMAN 6 Surabaya. Kemudian, terdapat pula fitur kesiswaan yang memuat jurusan dan ekstrakulikuler. Terakhir, terdapat fitur kontak yang menampilkan website dan sosial media sekolah.
+
+**Sumber Web Sekolah: [sman6sby](https://sman6sby.sch.id/)**
 
 ![](images/preview.png)
 
