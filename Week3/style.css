@@ -585,3 +585,86 @@ form.form-kontak button:hover {
   text-align: center;
   color: var(--biru-tua);
 }
+
+/* ============ PERBAIKAN ============ */
+.berita-card {
+  display: block;
+  color: var(--teks);
+}
+
+.berita-card .baca-selengkapnya {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--biru);
+}
+
+.berita-card:hover .baca-selengkapnya {
+  color: var(--kuning-tua);
+}
+
+/* transisi reveal tidak bentrok dengan efek hover kartu */
+.berita-card.reveal.tampil,
+.prestasi-card.reveal.tampil {
+  transition: opacity 0.8s ease-out, transform 0.3s, box-shadow 0.3s;
+}
+
+.berita-card.reveal.tampil:hover,
+.prestasi-card.reveal.tampil:hover {
+  transform: translateY(-6px);
+}
+
+.sambutan {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.sambutan img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sambutan > div {
+  flex: 1;
+  min-width: 240px;
+}
+
+.nama-kepsek {
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--biru-tua);
+}
+
+.nama-kepsek span {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.osis-kotak {
+  display: block;
+  transition: transform 0.3s;
+}
+
+.osis-kotak:hover {
+  transform: translateY(-4px);
+}
+
+.osis-kotak .nama,
+.osis-kotak .jabatan-osis {
+  display: block;
+}
+
+.maps-container iframe {
+  display: block;
+}
+
+.profil-box h3 {
+  color: var(--biru-tua);
+}
