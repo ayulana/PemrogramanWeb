@@ -41,6 +41,7 @@ Mendapatkan informasi mengenai kegiatan dan perkembangan sekolah.
 Melihat berita, kegiatan, prestasi, dan dokumentasi sekolah.
 
 ### 5. Struktur Website
+```
 Website Profil Sekolah
 │
 ├── Beranda
@@ -63,6 +64,7 @@ Website Profil Sekolah
 ├── Berita
 │
 └── Kontak
+```
 
 ### 6. Functional Requirements
 **FR 01 — Beranda**
@@ -117,6 +119,7 @@ Menampilkan informasi:
 - Masukan
 
 ### 7. Admin / Content Management
+```
 Admin Dashboard
 ■
 ■■■ Dashboard
@@ -126,6 +129,7 @@ Admin Dashboard
 ■■■ Program Akademik
 ■■■ Pesan Kontak
 ■■■ User Management
+```
 Admin dapat melakukan operasi Create, Read, Update, dan Delete (CRUD) pada konten website.
 
 ### 8. Non-Functional Requirements
@@ -180,6 +184,7 @@ HTML + CSS + JavaScript + Vercel
 
 ### 12. User Flow
 **Pengunjung**
+```
 Beranda
 ■
 ■■■ Profil
@@ -187,5 +192,6 @@ Beranda
 ■■■ Prestasi
 ■■■ Berita
 ■■■ Kontak
+```
 
 ### 13. Struktur Project
