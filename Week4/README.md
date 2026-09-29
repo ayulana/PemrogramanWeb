@@ -1,14 +1,14 @@
 # PRODUCT REQUIREMENTS DOCUMENT (PRD)
 
-## Website Profil Sekolah SMA
+## Website Profil SMAN 6 Surabaya
 - Nama: Mas Ayu Lana afiah
 - NRP: 5025251064
 - Kelas: Pemrograman Web B
 
-[**Website Asal**](https://sman6sby.sch.id/) 
-[**Repository Kode**](https://github.com/ayulana/PemrogramanWeb/blob/main/Week3/README.md)
-[**Dokumentasi Pembuatan Web**]()
-[**Hasil Web**](https://sman6website.vercel.app/)
+- [**Website Asal**](https://sman6sby.sch.id/) 
+- [**Repository Kode**](https://github.com/ayulana/PemrogramanWeb/blob/main/Week3)
+- [**Dokumentasi Pembuatan Web**](https://github.com/ayulana/PemrogramanWeb/blob/main/Week3/README.md)
+- [**Hasil Web**](https://sman6website.vercel.app/)
 
 ### 1. Informasi Produk
 | Item          | Detail  | 
@@ -165,7 +165,16 @@ HTML + CSS + JavaScript + Vercel
 ```
 
 ### 10. Struktur Database
-
+users
+schools
+teachers
+programs
+extracurriculars
+achievements
+news
+categories
+contacts
+Relasi utama: users → news; categories → news.
 
 ### 11. Prioritas Fitur
 **MVP**
@@ -202,3 +211,29 @@ Beranda
 ```
 
 ### 13. Struktur Project
+```
+Website Profil Sekolah
+│
+├── README.md
+|
+├── images
+│   ├── background.png
+│   ├── berita1.png
+|   ├── berita2.png
+│   ├── berita3.png
+│   ├── kepsek.png
+│   ├── logo.png
+|   ├── prestasi1.png
+│   ├── prestasi2.png
+│   ├── prestasi3.png
+│   └── preview.png
+│
+├── berita.html
+├── index.html
+├── kesiswaan.html
+├── kontak.html
+├── prestasi.html
+├── profil.html
+├── script.js
+└── style.css
+```
