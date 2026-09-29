@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMAN 6 Surabaya - Kesiswaan</title>
+  <link rel="icon" type="image/png" href="image/logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
     <div class="header-brand">
-      <img src="images/logo.png">
+      <img src="image/logo.png" alt="Logo SMAN 6 Surabaya">
       <h1>SMAN 6 Surabaya</h1>
     </div>
+    <button class="menu-toggle" type="button" aria-label="Buka menu">&#9776;</button>
     <nav>
       <ul>
         <li><a href="index.html">Beranda</a></li>
-        <li><a href="index.html#profil">Profil</a></li>
+        <li><a href="profil.html">Profil</a></li>
         <li><a href="kesiswaan.html" class="active">Kesiswaan</a></li>
+        <li><a href="prestasi.html">Prestasi</a></li>
+        <li><a href="berita.html">Berita</a></li>
         <li><a href="kontak.html">Kontak</a></li>
       </ul>
     </nav>
@@ -25,10 +29,9 @@
 
   <section class="section">
     <h2 class="judul-section reveal">Daftar Jurusan</h2>
-
     <div class="jurusan-item reveal">
       <h2>IPA</h2>
-      <p>Mempelajari rumpun mata pelajaran IPA diluar mata pelajaran wajib.</p>
+      <p>Mempelajari rumpun mata pelajaran IPA di luar mata pelajaran wajib.</p>
       <ul>
         <li>Fisika</li>
         <li>Matematika Tingkat Lanjut</li>
@@ -39,7 +42,7 @@
 
     <div class="jurusan-item reveal">
       <h2>IPS</h2>
-      <p>Mempelajari rumpun mata pelajaran IPA diluar mata pelajaran wajib.</p>
+      <p>Mempelajari rumpun mata pelajaran IPS di luar mata pelajaran wajib.</p>
       <ul>
         <li>Ekonomi</li>
         <li>Sosiologi</li>
@@ -65,59 +68,22 @@
 
   <section class="section">
     <h2 class="judul-section reveal">Daftar Ekstrakurikuler</h2>
-
     <table class="ekskul-table reveal">
       <thead>
-        <tr>
-          <th>No</th>
-          <th>Nama Ekstrakurikuler</th>
-        </tr>
+        <tr><th>No</th><th>Nama Ekstrakurikuler</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>School Parenting Motivation</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Palang Merah Remaja (PMR)</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Teater Kedok</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Sie Kerohanian Islam (SKI)</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>English Study Club (ESC)</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>Pecinta Alam (SMANAPALA)</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>Paskibraka</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>Bola Basket</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>Bola Voli</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td>Cheersleaders</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td>Paduan Suara (Sixers Voices)</td>
-        </tr>
+        <tr><td>1</td><td>School Parenting Motivation</td></tr>
+        <tr><td>2</td><td>Palang Merah Remaja (PMR)</td></tr>
+        <tr><td>3</td><td>Teater Kedok</td></tr>
+        <tr><td>4</td><td>Sie Kerohanian Islam (SKI)</td></tr>
+        <tr><td>5</td><td>English Study Club (ESC)</td></tr>
+        <tr><td>6</td><td>Pecinta Alam (SMANAPALA)</td></tr>
+        <tr><td>7</td><td>Paskibraka</td></tr>
+        <tr><td>8</td><td>Bola Basket</td></tr>
+        <tr><td>9</td><td>Bola Voli</td></tr>
+        <tr><td>10</td><td>Cheerleaders</td></tr>
+        <tr><td>11</td><td>Paduan Suara (Sixers Voices)</td></tr>
       </tbody>
     </table>
   </section>
@@ -125,43 +91,25 @@
   <section class="section">
     <h2 class="judul-section reveal">Jumlah Siswa</h2>
     <div class="stats-bar reveal">
-      <div class="stat-kotak">
-        <span class="angka">[JUMLAH]</span>
-        <span class="label">Total Siswa</span>
-      </div>
-      <div class="stat-kotak">
-        <span class="angka">[JUMLAH]</span>
-        <span class="label">Kelas X</span>
-      </div>
-      <div class="stat-kotak">
-        <span class="angka">[JUMLAH]</span>
-        <span class="label">Kelas XI</span>
-      </div>
-      <div class="stat-kotak">
-        <span class="angka">[JUMLAH]</span>
-        <span class="label">Kelas XII</span>
-      </div>
+      <div class="stat-kotak"><span class="angka" id="stat-total">-</span><span class="label">Total Siswa</span></div>
+      <div class="stat-kotak"><span class="angka" id="stat-x">-</span><span class="label">Kelas X</span></div>
+      <div class="stat-kotak"><span class="angka" id="stat-xi">-</span><span class="label">Kelas XI</span></div>
+      <div class="stat-kotak"><span class="angka" id="stat-xii">-</span><span class="label">Kelas XII</span></div>
     </div>
   </section>
 
   <section class="section">
     <h2 class="judul-section reveal">OSIS / MPK</h2>
-    <div class="profil-box reveal" style="margin-bottom:25px;">
-      <p>
-        Mengatur MPLS siswa baru dan berbagai event tahunan sekolah, seperti classmeet dan lain sebagainya.
-      </p>
+    <div class="profil-box reveal">
+      <p>Mengatur MPLS siswa baru dan berbagai event tahunan sekolah, seperti classmeet dan lain sebagainya.</p>
     </div>
     <div class="osis-grid reveal">
-      <li>
-        <a href="https://www.instagram.com/osismpksmanam/?hl=en" target="_blank">
-          Instagram: @osismpksmanam
-        </a>
-      </li>
-      <li>
-        <a href="https://www.tiktok.com/@osismpksmanam" target="_blank">
-          TikTok: @osismpksmanam
-        </a>
-      </li>
+      <a class="osis-kotak" href="https://www.instagram.com/osismpksmanam/?hl=en" target="_blank" rel="noopener noreferrer">
+        <span class="nama">Instagram</span><span class="jabatan-osis">@osismpksmanam</span>
+      </a>
+      <a class="osis-kotak" href="https://www.tiktok.com/@osismpksmanam" target="_blank" rel="noopener noreferrer">
+        <span class="nama">TikTok</span><span class="jabatan-osis">@osismpksmanam</span>
+      </a>
     </div>
   </section>
 
