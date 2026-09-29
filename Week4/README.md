@@ -5,6 +5,11 @@
 - NRP: 5025251064
 - Kelas: Pemrograman Web B
 
+[**Website Asal**](https://sman6sby.sch.id/) 
+[**Repository Kode**](https://github.com/ayulana/PemrogramanWeb/blob/main/Week3/README.md)
+[**Dokumentasi Pembuatan Web**]()
+[**Hasil Web**](https://sman6website.vercel.app/)
+
 ### 1. Informasi Produk
 | Item          | Detail  | 
 |     :---      |  :---   |
@@ -160,6 +165,8 @@ HTML + CSS + JavaScript + Vercel
 ```
 
 ### 10. Struktur Database
+
+
 ### 11. Prioritas Fitur
 **MVP**
 - Beranda	
