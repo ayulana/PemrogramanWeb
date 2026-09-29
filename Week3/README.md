@@ -10,12 +10,30 @@ Website yang saya buat berisi gambaran singkat SMAN 6 Surabaya. Terdapat profile
 
 **Sumber Web Sekolah: [sman6sby](https://sman6sby.sch.id/)**
 
+### Wireframe
+![](wireframe/Beranda.png)
+![](wireframe/Profil.png)
+![](wireframe/Kesiswaan.png)
+![](wireframe/Prestasi.png)
+![](wireframe/Berita.png)
+![](wireframe/Kontak.png)
+
+### Preview UI 
 ![](images/preview.png)
 
 ---
 
 ### File [`index.html`](index.html)
 Pada file ini saya mengatur bagian beranda dan profil yang menjadi satu. Pada tampilan beranda, terdapat logo SMAN 6 Surabaya dan gambar background berkaitan yang saya masukkan. Saya juga menambahkan header dan footer yang akan ada pada setiap halaman. Terdapat juga navigasi menu. Serta, tampilan tentang sekolah dan visi misi yang menggunakan `<ol></ol>`.
+
+### File [`profil.html`](profil.html)
+Pada file ini halaman profil terbagi menjadi beberapa section. Bagian pertama adalah sambutan kepala sekolah, berisi foto berbentuk lingkaran dan teks sambutan. Kemudian ada section tentang sekolah yang berisi sejarah singkat SMAN 6 Surabaya dalam beberapa paragraf `<p></p>`. Setelah itu terdapat visi dan misi, dengan misi ditampilkan menggunakan <ol></ol> agar berurutan. Terakhir, terdapat tabel daftar fasilitas sekolah menggunakan <table></table>. Pada halaman ini saya juga menambahkan header, navigasi menu, dan footer yang sama seperti halaman lainnya.
+
+### File [`prestasi.html`](prestasi.html)
+Pada file ini, saya menampilkan daftar prestasi sekolah dan siswa menggunakan display: grid di CSS. Setiap kartu berisi foto prestasi, label tingkat prestasi, nama lomba, serta nama siswa dan tahunnya. Terdapat efek naik saat kursor diarahkan dan muncul perlahan saat halaman di-scroll. Pada halaman ini saya juga menambahkan header, navigasi menu, dan footer yang sama.
+
+### File [`berita.html`](berita.html)
+Pada file ini, saya menampilkan berita dan informasi sekolah menggunakan display: grid. Setiap kartu bisa diklik dan langsung menuju berita aslinya di website lain. Link tersebut memakai `target="_blank"` agar terbuka di tab baru. Setiap card berisi gambar berita, tanggal, dan judul. Pada halaman ini saya juga menambahkan header, navigasi menu, dan footer seperti halaman lainnya.
 
 ### File [`kesiswaan.html`](kesiswaan.html)
 Pada file ini, terdapat daftar jurusan menggunakan `<ul></ul>` yang terbagi menjadi beberapa section. Kemudian terdapat tabel daftar ekstrakurikuler menggunakan `<table></table>`. Pada halaman ini saya juga menambahkan header footer yang sama.
