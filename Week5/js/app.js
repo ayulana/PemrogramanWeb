@@ -87,8 +87,8 @@
                     '<td>' + (start + i + 1) + '</td>' +
                     '<td>' + escapeHtml(s.nim) + '</td>' +
                     '<td>' + escapeHtml(s.nama) + '</td>' +
-                    '<td>' + escapeHtml(s.email) + '</td>' +
                     '<td>' + escapeHtml(s.jurusan) + '</td>' +
+                    '<td>' + escapeHtml(s.email) + '</td>' +
                     '<td><div class="actions">' +
                         '<button class="action edit" data-act="edit" data-id="' + s.id + '" aria-label="Edit">&#9998;</button>' +
                         '<button class="action delete" data-act="delete" data-id="' + s.id + '" aria-label="Hapus">&#128465;</button>' +
@@ -135,8 +135,8 @@
         var data = {
             nim: fNim.value.trim(),
             nama: fNama.value.trim(),
-            email: fEmail.value.trim(),
-            jurusan: fJurusan.value
+            jurusan: fJurusan.value.trim(),
+            email: fEmail.value
         };
         var err = validate(data);
         if (err) { formError.textContent = err; return; }
@@ -169,8 +169,8 @@
             fId.value = student.id;
             fNim.value = student.nim;
             fNama.value = student.nama;
-            fEmail.value = student.email;
             fJurusan.value = student.jurusan;
+            fEmail.value = student.email;
             formError.textContent = "";
             formTitle.textContent = "Edit Student";
             btnSave.textContent = "Update";
