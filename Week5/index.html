@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplikasi Student Management.">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="brand">Student Management</div>
+        <nav class="nav-menu">
+            <a href="#form-student">Form Student</a>
+            <a href="#data-mahasiswa">Data Mahasiswa</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="card" id="form-student">
+            <h2 class="card-title" id="form-title">Form Student</h2>
+
+            <form id="student-form" novalidate>
+                <input type="hidden" id="student-id">
+
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" placeholder="Contoh: 2024001" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Nama mahasiswa" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="jurusan">Jurusan</label>
+                    <select id="jurusan" required>
+                        <option value="">Pilih jurusan</option>
+                        <option>Teknik Informatika</option>
+                        <option>Sistem Informasi</option>
+                        <option>Teknik Komputer</option>
+                        <option>Manajemen</option>
+                        <option>Akuntansi</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="nama@mail.com" required>
+                </div>
+
+                <p class="form-error" id="form-error" role="alert"></p>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="btn-save">Simpan</button>
+                    <button type="button" class="btn btn-secondary" id="btn-reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card" id="data-mahasiswa">
+            <div class="table-header">
+                <h2 class="card-title">Data Mahasiswa</h2>
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="Cari mahasiswa..." aria-label="Cari mahasiswa">
+                    <button type="button" class="btn btn-primary" id="btn-search" aria-label="Cari">&#128269;</button>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Jurusan</th>
+                            <th>Email</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-body"></tbody>
+                </table>
+            </div>
+
+            <div class="pagination" id="pagination"></div>
+        </section>
+
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
