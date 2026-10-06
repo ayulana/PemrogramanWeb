@@ -11,7 +11,6 @@
 
 Web di atas merupakan salah satu contoh penerapan css, yaitu Web Student Management untuk mengelola data mahasiswa. Dalam web tersebut, user dapat menambah, melihat, mengubah, menghapus, ataupun mencari data para mahasiswa. Web tersebut dibuat dengan penerapan HTML, CSS, dan JavaScript. Data yang sudah tercatat akan tersimpan dalam local storage user.
 
----
 
 ## Fitur
 - Menambahkan mahasiswa melalui form (NIM, Nama, Jurusan, dan Email).
@@ -23,9 +22,8 @@ Web di atas merupakan salah satu contoh penerapan css, yaitu Web Student Managem
 - Penyimpanan otomatis di browser supaya data tidak hilang.
 - Responsive
 
----
 
-### Penjelasan Kode
+## Penjelasan Kode
 ### [`index.html`](index.html)
 - Navbar: judul "Student Management" dan link ke Form Student dan Data Mahasiswa.
 - Kolom kiri: form input dengan field NIM, Nama Lengkap, Jurusan (dropdown),Email, area pesan error, serta tombol Simpan dan Reset. Ada juga hidden input yang menyimpan ID mahasiswa saat mode edit.
@@ -58,7 +56,6 @@ Memuat isi sebagai berikut:
 - Pencarian: memfilter data lalu kembali ke halaman 1.
 - Keamanan: `escapeHtml()` mencegah teks yang diinput ikut dieksekusi sebagai HTML.
 
----
 
 ## Struktur File
 ```
