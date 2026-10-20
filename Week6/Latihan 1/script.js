@@ -1,7 +1,30 @@
-var daftarNama = JSON.parse(localStorage.getItem("daftarNama")) || [];
+// contoh nama
+var namaBawaan = [
+  "Ahmad Fauzi", "Aisyah Putri", "Andi", "Budi Santoso", "Bayu", "Cahya", "Dewi",
+  "Dimas Aditya", "Eka Pratama", "Farhan Hidayat", "Gita Putri", 
+  "Rina", "Muhammad Aziz", "Sarah Eka"
+];
+
+// nama dari local storage user
+var namaTersimpan = JSON.parse(localStorage.getItem("daftarNama")) || [];
+
+var daftarNama = namaBawaan.slice();
+for (var i = 0; i < namaTersimpan.length; i++) {
+  tambahKeDaftar(namaTersimpan[i]);
+}
 
 var inputNama = document.getElementById("nama");
 var listSaran = document.getElementById("saran");
+
+function tambahKeDaftar(nama) {
+  for (var i = 0; i < daftarNama.length; i++) {
+    if (daftarNama[i].toLowerCase() === nama.toLowerCase()) {
+      return false;
+    }
+  }
+  daftarNama.push(nama);
+  return true;
+}
 
 inputNama.addEventListener("input", function () {
   var kata = inputNama.value.toLowerCase();
@@ -30,13 +53,17 @@ function pilihNama() {
 }
 
 function simpanNama(nama) {
-  for (var i = 0; i < daftarNama.length; i++) {
-    if (daftarNama[i].toLowerCase() === nama.toLowerCase()) {
-      return;
+  var sudahAda = false;
+  for (var i = 0; i < namaTersimpan.length; i++) {
+    if (namaTersimpan[i].toLowerCase() === nama.toLowerCase()) {
+      sudahAda = true;
     }
   }
-  daftarNama.push(nama);
-  localStorage.setItem("daftarNama", JSON.stringify(daftarNama));
+  if (!sudahAda) {
+    namaTersimpan.push(nama);
+    localStorage.setItem("daftarNama", JSON.stringify(namaTersimpan));
+  }
+  tambahKeDaftar(nama);
 }
 
 document.getElementById("formRegistrasi").addEventListener("submit", function (e) {
