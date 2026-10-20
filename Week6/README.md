@@ -26,15 +26,15 @@ Membuat form registrasi mahasiswa yang berisi nama, NIM, mata kuliah, dan dosen.
 
 ### Penjelasan kode
 
-**index.html**
+[**index.html**](./Latihan%201/index.html)
 - `<input id="nama">` adalah kolom yang diketik pengguna, dan `<ul id="saran">` adalah tempat daftar rekomendasi muncul.
 - `<select id="matkul">` adalah pilihan mata kuliah, sedangkan NIM dan dosen berupa input teks biasa.
 
-**style.css**
+[**style.css**](./Latihan%201/style.css)
 - `#saran` disembunyikan di awal (`display: none`) dan baru ditampilkan lewat JavaScript saat ada rekomendasi.
 - `#saran li:hover` memberi warna biru muda pada rekomendasi yang sedang ditunjuk kursor.
 
-**script.js**
+[**script.js**](./Latihan%201/script.js)
 - `namaBawaan` adalah fungsi yang berisi daftar contoh nama yang akan muncul sejak huruf pertama diketikkan
 -  `namaTersimpan` adalah fungsi yang berisi daftar nama yang tersimpan dari local storage user
 - `daftarNama` adalah array berisi nama-nama yang menjadi bahan rekomendasi.
@@ -65,18 +65,18 @@ Membuat pencarian kode pos dengan masukan provinsi, kabupaten/kota, dan kecamata
 
 ### Penjelasan kode
 
-**index.html**
+[**index.html**](./Latihan%202/index.html)
 - `<label>` memberikan nama pada input.
 - `<select>` membuat dropdown atau pilihan.
 - `id="provinsi"` menjadi identitas elemen agar bisa diakses oleh JavaScript.
 - `<option>` menjadi pilihan yang ditampilkan di dropdown.
 
-**style.css**
+[**style.css**](./Latihan%202/style.css)
 - `#hasil` memilih elemen dengan ID hasil.
 - `margin-top: 16px` memberikan jarak atas sebesar 16 piksel.
 - `font-size: 16px` - mengatur ukuran teks menjadi 14 piksel.
 
-**script.js**
+[**script.js**](./Latihan%202/script.js)
 - `async function` membuat fungsi yang dapat menunggu proses asynchronous.
 - `fetch(url)` meminta data dari API.
 - `await` menunggu respons sebelum melanjutkan proses.
@@ -106,13 +106,13 @@ Program ini membuat form registrasi yang meminta nama lengkap, alamat, email, pa
 
 ## Penjelasan Kode
 
-**index.html**
+[**index.html**](./Latihan%203/index.html)
 - Untuk menyusun struktur form dan kolom yang diisi pengguna.
 
-**style.css**
+[**style.css**](./Latihan%203/style.css)
 - Menyusun tampilan form, kolom input, tombol, dan pesan error.
 
-**script.jss**
+[**script.js**](./Latihan%203/script.js)
 - `"use strict"`: mengaktifkan mode JavaScript yang lebih ketat.
 - `querySelector()` dan `querySelectorAll()`: mengambil elemen HTML yang dibutuhkan.
 - `emailPattern`: pola sederhana untuk memeriksa format email.
@@ -145,13 +145,13 @@ Membuat dua dropdown yang saling terhubung. Dropdown pertama berisi jenis produk
 
 ### Penjelasan kode
 
-**index.html**
+[**index.html**](./Latihan%204/index.html)
 - Dropdown `jenis` sudah berisi pilihan tetap, sedangkan dropdown `merk` hanya berisi "Pilih Merk" dan akan diisi oleh JavaScript.
 
-**style.css**
+[**style.css**](./Latihan%204/style.css)
 - Mengatur font, ukuran, dan jarak antar elemen.
 
-**script.js**
+[**script.js**](./Latihan%204/script.js)
 - `dataMerk` adalah objek yang menyimpan daftar merk untuk tiap jenis produk. Kuncinya sama dengan `value` pada dropdown jenis.
 - `jenis.onchange` berjalan saat jenis produk diganti.
 - `merk.length = 1` membuang semua pilihan merk dan menyisakan pilihan pertama ("Pilih Merk").
