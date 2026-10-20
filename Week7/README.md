@@ -21,12 +21,6 @@ Fitur utama:
 | Mobile-first | Tampilan dirancang untuk HP dulu, lalu melebar ke layar besar |
 | JavaScript bundle | Komponen interaktif (dropdown, modal, collapse) via `bootstrap.bundle.min.js` |
 
-Cara pakai (CDN), cukup dua baris:
-
-```html
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-```
 
 ## Tujuan Pembelajaran
 
@@ -38,7 +32,7 @@ Cara pakai (CDN), cukup dua baris:
 
 ## Latihan Soal
 
-### Latihan 1 – Membuat halaman konten (`latihan-1/index.html`)
+### Latihan 1 – Membuat halaman konten [index.html](latihan-1/index.html)
 
 **Soal:** membuat halaman dengan Header (menu), Sidebar, Konten (fitur + artikel), dan Footer memakai Bootstrap.
 
@@ -60,12 +54,16 @@ Cara pakai (CDN), cukup dua baris:
 | Footer | `bg-dark text-white py-3 mt-auto`, `d-flex justify-content-between` | Footer gelap, isi kiri-kanan; `mt-auto` mendorongnya ke dasar |
 
 
-### Latihan 2 – Halaman Login dan Register (`latihan-2/`)
+### Latihan 2 – Halaman Login dan Register `latihan-2/`
 
 **Soal:** 
 membuat halaman login atau register memakai Bootstrap. Dikerjakan keduanya: `login.html` (tampilan *split screen* dengan gambar pegunungan) dan `register.html` (formulir pendaftaran dengan garis pelangi).
 
-**A. Login (`login.html` + `style.css`)**
+**A. Login**
+
+[login.html](latihan-2/login.html)
+
+[style.css](latihan-2/style.css)
 
 *Cara kerja:* halaman dibagi dua kolom tanpa jarak (`row g-0`). Kolom kiri (`bg-image`) menampilkan gambar dan disembunyikan di HP lewat `d-none d-md-flex`. Kolom kanan berisi formulir yang diposisikan di tengah vertikal dengan `d-flex align-items-center` dan `min-height: 100vh`.
 
@@ -80,7 +78,7 @@ membuat halaman login atau register memakai Bootstrap. Dikerjakan keduanya: `log
 | `.btn-login` (CSS) | Ukuran huruf, jarak huruf, dan padding tombol |
 | `.bg-image` (CSS) | Gambar latar `cover` dan `center` |
 
-**B. Register (`register.html`)**
+**B. Register [register.html](latihan-2/register.html)**
 
 *Cara kerja:* Nama depan/belakang dan password/konfirmasi masing-masing `col-md-6` (berdampingan), sisanya selebar penuh. Tombol **I Agree** memakai `btn-check` + `label.btn`, yaitu checkbox yang tampil seperti tombol toggle. Dua garis warna-warni dibuat dengan `linear-gradient` 8 segmen di class `.rainbow-bar`. Tombol Register (biru) mengirim form, Sign In (hijau) menuju `login.html`.
 
