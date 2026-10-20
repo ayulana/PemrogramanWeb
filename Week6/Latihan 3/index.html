@@ -3,25 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email Validation</title>
+  <title>Registration Form</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="box">
-    <h2>Email Validation</h2>
-    <form id="formLogin">
-      <label for="email">Email:</label>
-      <input type="text" id="email" placeholder="contoh@gmail.com">
-      <span class="error" id="errEmail"></span>
+  <main class="container">
+    <h1>Registration Form</h1>
+    <p class="intro">Please fill in the form below to register.</p>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" placeholder="Minimal 6 karakter">
-      <span class="error" id="errPassword"></span>
+    <form id="registration-form" novalidate>
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+        <small id="name-error" class="error"></small>
+      </div>
 
-      <button type="submit">Submit</button>
+      <div class="field">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Enter your address" required></textarea>
+        <small id="address-error" class="error"></small>
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="example@domain.com" required>
+        <small id="email-error" class="error"></small>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="At least 6 characters" required>
+        <small id="password-error" class="error"></small>
+      </div>
+
+      <div class="field">
+        <label for="course">Course</label>
+        <select id="course" name="course" required>
+          <option value="">Choose a course</option>
+          <option value="Informatika">Informatika</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+          <option value="Teknik Komputer">Teknik Komputer</option>
+          <option value="Lainnya">Lainnya</option>
+        </select>
+        <small id="course-error" class="error"></small>
+      </div>
+
+      <div class="field">
+        <label for="college">College / University</label>
+        <input id="college" name="college" type="text" placeholder="Enter your college name" required>
+        <small id="college-error" class="error"></small>
+      </div>
+
+      <div class="agreement">
+        <input id="agreement" name="agreement" type="checkbox">
+        <label for="agreement">I agree that the information above is correct.</label>
+      </div>
+      <small id="agreement-error" class="error agreement-error"></small>
+
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset" class="reset">Reset</button>
+      </div>
+
+      <p id="status" role="status" aria-live="polite"></p>
     </form>
-    <p id="sukses"></p>
-  </div>
-  <script src="script.js"></script>
+  </main>
 </body>
 </html>
