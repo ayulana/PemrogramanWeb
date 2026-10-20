@@ -6,6 +6,9 @@
 
 ---
 
+### Link Deployment
+[app](https://week7bootstrap.netlify.app/)
+
 
 ## Penjelasan Bootstrap
 
@@ -32,7 +35,11 @@ Fitur utama:
 
 ## Latihan Soal
 
+<img width="959" height="436" alt="image" src="https://github.com/user-attachments/assets/10df1ad7-1e4f-45ff-9e19-479ba5f1c161" />
+
 ### Latihan 1 – Membuat halaman konten [index.html](latihan-1/index.html)
+
+<img width="959" height="436" alt="image" src="https://github.com/user-attachments/assets/91198116-ddce-4494-8677-ea3a1f867916" />
 
 **Soal:** membuat halaman dengan Header (menu), Sidebar, Konten (fitur + artikel), dan Footer memakai Bootstrap.
 
@@ -55,6 +62,10 @@ Fitur utama:
 
 
 ### Latihan 2 – Halaman Login dan Register `latihan-2/`
+
+<img width="959" height="433" alt="image" src="https://github.com/user-attachments/assets/88911452-609b-49ad-af1b-5c49fe6179ce" />
+
+<img width="959" height="436" alt="image" src="https://github.com/user-attachments/assets/6b3fafaf-201d-4b2f-8398-423528bfdaac" />
 
 **Soal:** 
 membuat halaman login atau register memakai Bootstrap. Dikerjakan keduanya: `login.html` (tampilan *split screen* dengan gambar pegunungan) dan `register.html` (formulir pendaftaran dengan garis pelangi).
