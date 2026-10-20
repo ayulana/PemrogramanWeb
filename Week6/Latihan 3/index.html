@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <h2>Email Validation</h2>
+    <form id="formLogin">
+      <label for="email">Email:</label>
+      <input type="text" id="email" placeholder="contoh@gmail.com">
+      <span class="error" id="errEmail"></span>
 
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Minimal 6 karakter">
+      <span class="error" id="errPassword"></span>
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="sukses"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
