@@ -1,47 +1,74 @@
-var email = document.getElementById("email");
-var password = document.getElementById("password");
+"use strict";
 
-var polaEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const form = document.querySelector("#registration-form");
+const fields = [...form.querySelectorAll("input, select, textarea")];
+const status = document.querySelector("#status");
 
-function cekEmail() {
-  var pesan = document.getElementById("errEmail");
-  if (email.value === "") {
-    pesan.textContent = "Email tidak boleh kosong";
-    email.className = "salah";
-    return false;
+const emailPattern = /^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/;
+
+function validateField(field) {
+  let message = "";
+
+  if (field.type === "checkbox") {
+    if (!field.checked) {
+      message = "Please agree to the information above.";
+    }
+  } else if (!field.value.trim()) {
+    message = "This field is required.";
+  } else if (field.type === "email") {
+    if (field.validity.typeMismatch || !emailPattern.test(field.value.trim())) {
+      message = "Please enter a valid email, such as example@domain.com.";
+    }
+  } else if (field.type === "password" && field.value.length < 6) {
+    message = "Password must contain at least 6 characters.";
   }
-  if (!polaEmail.test(email.value)) {
-    pesan.textContent = "Format email tidak valid";
-    email.className = "salah";
-    return false;
-  }
-  pesan.textContent = "";
-  email.className = "benar";
-  return true;
+
+  field.setAttribute("aria-invalid", String(Boolean(message)));
+  const errorElement = document.getElementById(`${field.id}-error`);
+  if (errorElement) errorElement.textContent = message;
+
+  return !message;
 }
 
-function cekPassword() {
-  var pesan = document.getElementById("errPassword");
-  if (password.value.length < 6) {
-    pesan.textContent = "Password minimal 6 karakter";
-    password.className = "salah";
-    return false;
-  }
-  pesan.textContent = "";
-  password.className = "benar";
-  return true;
-}
+fields.forEach((field) => {
+  field.addEventListener("blur", () => validateField(field));
 
-email.onblur = cekEmail;
-password.onblur = cekPassword;
+  field.addEventListener("input", () => {
+    status.textContent = "";
+    if (field.getAttribute("aria-invalid") === "true") {
+      validateField(field);
+    }
+  });
 
-document.getElementById("formLogin").onsubmit = function (e) {
-  e.preventDefault();
-  var emailOk = cekEmail();
-  var passOk = cekPassword();
-  if (emailOk && passOk) {
-    document.getElementById("sukses").textContent = "Validasi berhasil, data valid!";
-  } else {
-    document.getElementById("sukses").textContent = "";
+  field.addEventListener("change", () => {
+    status.textContent = "";
+    validateField(field);
+  });
+});
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  status.textContent = "";
+
+  const isValid = fields.map(validateField).every(Boolean);
+
+  if (!isValid) {
+    const firstInvalidField = fields.find(
+      (field) => field.getAttribute("aria-invalid") === "true"
+    );
+    if (firstInvalidField) firstInvalidField.focus();
+    return;
   }
-};
+
+  status.textContent = "Registration validated successfully.";
+});
+
+form.addEventListener("reset", () => {
+  fields.forEach((field) => {
+    field.removeAttribute("aria-invalid");
+    const errorElement = document.getElementById(`${field.id}-error`);
+    if (errorElement) errorElement.textContent = "";
+  });
+
+  status.textContent = "";
+});
