@@ -1,0 +1,28 @@
+.login { min-height: 100vh; }
+
+.bg-image {
+  background-image: url('img/mountain.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading { font-weight: 300; }
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.register-wrap { max-width: 880px; }
+
+.rainbow-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right,
+    #c1e17d 0 12.5%, #f6fbc4 12.5% 25%, #fbc96b 25% 37.5%, #ee7566 37.5% 50%,
+    #d79bc0 50% 62.5%, #c39be0 62.5% 75%, #6a9be0 75% 87.5%, #5bc0de 87.5% 100%);
+}
+
+.register-wrap .form-control { padding: 1.1rem 1.5rem; font-size: 1.4rem; }
+.register-wrap .btn-lg { font-size: 1.5rem; padding: .75rem; }
