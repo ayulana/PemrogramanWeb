@@ -99,3 +99,6 @@ Halaman ini dibuat untuk login petugas. Data petugas sudah harus diinput melalui
 - Masukkan password
 
 ## 3. Desain UI Landing Page
+
+<img width="416" height="331" alt="image" src="https://github.com/user-attachments/assets/71f6265a-7867-4f70-81eb-3e3b83979aa3" />
+<img width="453" height="342" alt="image" src="https://github.com/user-attachments/assets/24f72353-273d-4d32-b960-bf98b0078cd9" />
