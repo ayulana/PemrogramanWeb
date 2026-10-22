@@ -105,7 +105,7 @@ Halaman ini dibuat untuk login petugas. Data petugas sudah harus diinput melalui
 
 ## 4. Implementasikan dan publis web yang dibuat
 
-[**Link Deployment**](https://vercel.com/ayulana/implementasi_ets)
+[**Link Deployment**](https://implementasiets.vercel.app/)
 
 Pada implementasi tersebut, terdapat 8 file dengan 6 file `.html`, 1 file `.css`, dan 1 file `.js`. Menggunakan teknologi HTML5, CSS3, JavaScript, Bootstrap 5, dan localStorage sebagai penyimpanan data sementara.
 
