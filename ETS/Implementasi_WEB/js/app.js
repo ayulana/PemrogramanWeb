@@ -1,3 +1,11 @@
+const IMG={
+ hero:'https://pengadaan.penerbitdeepublish.com/wp-content/uploads/2023/04/ciri-fasilitas-perpustakaan-yang-baik.webp',
+ koleksi:['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIJeuoPJPvzX6UefVyCsTm_M9QoZs4NGPrL5eCroqxQxylRAnvDls3Ynvo&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtQPsRDMD2-EX1GlGg4AkisaMic4jFJIWWk19uXWkD6g&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6tQH1SXaf0uYYVg4TVMvpCBrK-Zd4TKAoPAEYyFxOPA&s=10'],
+ keunggulan:['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQma3ZJddPuOTMk6lQsl6UXX8lxA7Fi6joWO9hHrESvA&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS07Nmwi9haBt32qfW_lfMlVmjhVIuSf0sc1OeIg6XWfQ&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8wHQPQ1yoQLkjZZJL67ewa4BQVGwcPHWIor5k8ULAw&s=10'],
+ karya:['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuiedUwRaWh_i4g7qs0PbFoR_HGbgiELzit7HJBqTYNA&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLHgqGrA5LPMzDAApjkiWhse7vdUxyzNYcx6yLaJ0zPg&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo9O9sk39VIbyBBUOWcIf21mG6I_aRIs5rELiuxdE9hg&s=10'],
+ layanan:['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdqCcPNT_o6vn5yRyLie-R05Xr_7QFcX0U87S_SRFC1Q&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy4liL9PFV5_SxjpCxpfS5IdXMHnhyB2mdL-bxKyskXw&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy3lHq5w_bT22hCtcofuYhlhVjvqNKqO1H_lcge_QxqQ&s=10',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcb-FeYH0FP9VM0msbUJMjH5VRh6NQKpdUQyvcMaXTjA&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHY7cCW0tRNhTjsj2JrRWLjyTep7uEY4JBYhxwy44VYg&s=10','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_F5PKPbCAO_JP6MN7o1gpuv-lcWkJ2dvI9nH2akHDsw&s=10']
+};
 const K={m:'lr_members',u:'lr_user',s:'lr_staff'};
 const $=(s,e=document)=>e.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -15,7 +23,6 @@ if(!localStorage.getItem(K.m))db.set([
 
 if(!localStorage.getItem(K.s))localStorage.setItem(K.s,JSON.stringify([{email:'petugas@libraryreg.ac.id',nama:'Petugas Perpustakaan',password:'admin123'}]));
 
-// header footer
 const NAV=[['index.html','beranda','Beranda'],['tentang.html','tentang','Tentang'],['layanan.html','layanan','Informasi Layanan'],['pendaftaran.html','pendaftaran','Pendaftaran'],['data-anggota.html','data-anggota','Data Anggota']];
 const page=document.body.dataset.page;
 $('#site-header').innerHTML=`<nav class="navbar navbar-expand-lg bg-white"><div class="container">
@@ -34,7 +41,7 @@ document.addEventListener('click',e=>{if(e.target.closest('.js-logout')){localSt
 
 function toast(msg,type='success'){let c=$('#toasts');if(!c){c=document.createElement('div');c.id='toasts';c.className='toast-container position-fixed top-0 end-0 p-3';document.body.append(c)}
 const t=document.createElement('div');t.className=`toast align-items-center text-bg-${type} border-0`;t.innerHTML=`<div class="d-flex"><div class="toast-body">${esc(msg)}</div><button class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;c.append(t);const x=new bootstrap.Toast(t,{delay:3500});x.show();t.addEventListener('hidden.bs.toast',()=>t.remove())}
-const cards=(a,cols='col-md-4')=>a.map(c=>`<div class="${cols}"><div class="card-lr"><div class="ph">${c[3]||'COVER PLACEHOLDER'}</div><div class="p"><h3>${c[0]}</h3><p>${c[1]}</p>${c[2]?`<p class="mt-1">${c[2]}</p>`:''}</div></div></div>`).join('');
+const cards=(a,imgs,cols='col-md-4')=>a.map((c,i)=>`<div class="${cols}"><div class="card-lr"><img class="card-img" src="${imgs[i]}" alt="${esc(c[0])}" loading="lazy" onerror="this.style.visibility='hidden'"><div class="p"><h3>${c[0]}</h3><p>${c[1]}</p>${c[2]?`<p class="mt-1">${c[2]}</p>`:''}</div></div></div>`).join('');
 const bars=(rows)=>{const mx=Math.max(...rows.map(r=>r[1]),1);return rows.map(r=>`<div class="bar-row"><span>${r[0]}</span><div class="t"><i style="width:${r[1]/mx*100}%"></i></div><b>${r[1]}</b></div>`).join('')};
 const opts=a=>'<option value="">Pilih...</option>'+a.map(x=>`<option>${x}</option>`).join('');
 const formHTML=()=>`<div class="row g-3">
@@ -52,13 +59,14 @@ const fillForm=(f,m)=>{for(const k in m)if(f.elements[k])f.elements[k].value=m[k
 
 const P={};
 P.beranda=()=>{
-$('#koleksi').innerHTML=cards([['Laut Bercerita','Leila S. Chudori','Fiksi · Novel'],['Filosofi Teras','Henry Manampiring','Nonfiksi · Pengembangan diri'],['Laskar Pelangi','Andrea Hirata','Fiksi · Sastra Indonesia']]);
-$('#keunggulan').innerHTML=cards([['Ruang baca nyaman','Tempat duduk tenang, cahaya alami, dan suasana yang mendukung fokus.','','🪑'],['Koleksi digital','Akses buku elektronik, artikel, dan sumber pengetahuan melalui perangkat pribadi.','','💻'],['Komunitas literasi','Diskusi buku, kelas literasi, dan kegiatan komunitas untuk semua usia.','','👥']]);
+$('.hero-img').style.backgroundImage=`linear-gradient(rgba(30,27,75,.25),rgba(30,27,75,.25)),url(${IMG.hero})`;
+$('#koleksi').innerHTML=cards([['Laut Bercerita','Leila S. Chudori','Fiksi · Novel'],['Filosofi Teras','Henry Manampiring','Nonfiksi · Pengembangan diri'],['Laskar Pelangi','Andrea Hirata','Fiksi · Sastra Indonesia']],IMG.koleksi);
+$('#keunggulan').innerHTML=cards([['Ruang baca nyaman','Tempat duduk tenang, cahaya alami, dan suasana yang mendukung fokus.'],['Koleksi digital','Akses buku elektronik, artikel, dan sumber pengetahuan melalui perangkat pribadi.'],['Komunitas literasi','Diskusi buku, kelas literasi, dan kegiatan komunitas untuk semua usia.']],IMG.keunggulan);
 const m=db.get();$('#totalAnggota').textContent=m.length;
 $('#barsYear').innerHTML=bars([['2021',1200],['2022',1900],['2023',2600],['2024',3100],['2025',3500]]);
 $('#barsType').innerHTML=bars(JENIS.map(j=>[j,m.filter(x=>x.jenis===j).length]))};
-P.tentang=()=>{$('#karya').innerHTML=cards([['Jurnal Teknologi Informasi','Vol. 12 · Terbitan kampus','Open access'],['Prosiding Seminar Nasional','Kumpulan makalah ilmiah 2025','Karya dosen'],['Skripsi Terbaik','Karya tugas akhir mahasiswa','Repositori institusi']])};
-P.layanan=()=>{$('#layanan').innerHTML=cards([['Meminjam Buku & E-Book','Pinjam hingga 5 buku selama 14 hari, perpanjang secara online.','','📚'],['Akses Jurnal Online','Jurnal nasional dan internasional dari jaringan kampus.','','🔎'],['Booking Tempat Belajar','Reservasi meja, kursi, dan ruang diskusi dengan mudah.','','🗓️'],['Jam Operasional','Senin–Jumat 08.00–18.00 · Sabtu–Minggu 09.00–16.00.','','🕗'],['Program Kegiatan','Bedah buku, kelas literasi informasi, dan workshop referensi.','','🎓'],['Ruangan & Fasilitas','Ruang baca, diskusi, multimedia, komputer, Wi-Fi, dan loker.','','🏛️']])};
+P.tentang=()=>{$('#karya').innerHTML=cards([['Jurnal Teknologi Informasi','Vol. 12 · Terbitan kampus','Open access'],['Prosiding Seminar Nasional','Kumpulan makalah ilmiah 2025','Karya dosen'],['Skripsi Terbaik','Karya tugas akhir mahasiswa','Repositori institusi']],IMG.karya)};
+P.layanan=()=>{$('#layanan').innerHTML=cards([['Meminjam Buku & E-Book','Pinjam hingga 5 buku selama 14 hari, perpanjang secara online.'],['Akses Jurnal Online','Jurnal nasional dan internasional dari jaringan kampus.'],['Booking Tempat Belajar','Reservasi meja, kursi, dan ruang diskusi dengan mudah.'],['Jam Operasional','Senin–Jumat 08.00–18.00 · Sabtu–Minggu 09.00–16.00.'],['Program Kegiatan','Bedah buku, kelas literasi informasi, dan workshop referensi.'],['Ruangan & Fasilitas','Ruang baca, diskusi, multimedia, komputer, Wi-Fi, dan loker.']],IMG.layanan)};
 P.pendaftaran=()=>{const f=$('#regForm');$('#fields').innerHTML=formHTML();
 f.addEventListener('submit',e=>{e.preventDefault();const d=validate(f);if(!d)return toast('Periksa kembali isian formulir.','danger');
 const m=db.get();m.push({id:'m'+Date.now(),...d});db.set(m);f.reset();f.classList.remove('was-validated');toast('Pendaftaran berhasil! Kartu anggota Anda akan segera diproses.')});
@@ -67,7 +75,7 @@ P.login=()=>{if(user())return location.href='data-anggota.html';const f=$('#logi
 f.addEventListener('submit',e=>{e.preventDefault();f.classList.add('was-validated');if(!f.checkValidity())return;
 const s=JSON.parse(localStorage.getItem(K.s)).find(x=>x.email===f.email.value.trim()&&x.nama.toLowerCase()===f.nama.value.trim().toLowerCase()&&x.password===f.password.value);
 if(!s)return $('#loginErr').classList.remove('d-none');localStorage.setItem(K.u,JSON.stringify({email:s.email,nama:s.nama}));location.href='data-anggota.html'})};
-P['data-anggota']=()=>{if(!user())return location.href='login.html';
+P['data-anggota']=()=>{if(!user()){$('main').innerHTML=`<div class="form-card text-center py-5 mx-auto" style="max-width:560px"><div style="font-size:3rem">🔒</div><h1 class="h4 fw-bold mt-2">Akses Dibatasi</h1><p class="text-secondary">Data ini hanya bisa diakses oleh petugas. Mohon untuk login terlebih dahulu.</p><a class="btn btn-dark" href="login.html">Login Petugas</a></div>`;return}
 const f=$('#mForm'),body=$('#tbody'),q=$('#q'),fl=$('#f');let editId=null,delId=null;$('#mFields').innerHTML=formHTML();$('#who').textContent=user().nama;
 const modal=id=>bootstrap.Modal.getOrCreateInstance($(id));
 const draw=()=>{const t=q.value.toLowerCase().trim(),j=fl.value;const r=db.get().filter(m=>(!j||m.jenis===j)&&(m.nama.toLowerCase().includes(t)||m.nim.toLowerCase().includes(t)));
