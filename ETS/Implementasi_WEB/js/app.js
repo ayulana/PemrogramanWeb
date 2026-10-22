@@ -34,7 +34,7 @@ ${NAV.map(n=>`<li class="nav-item"><a class="nav-link ${page===n[1]?'active':''}
 $('#site-footer').innerHTML=`<footer class="site-footer"><div class="container"><div class="row g-4">
 <div class="col-lg-4"><div class="d-flex align-items-center gap-2 mb-2"><span class="brand-logo">LR</span><b class="text-white fs-5">LibraryReg</b></div><p>Aplikasi pendaftaran anggota perpustakaan perguruan tinggi.</p><div class="d-flex gap-2"><span class="brand-logo">IG</span><span class="brand-logo">FB</span><span class="brand-logo">YT</span></div></div>
 <div class="col-6 col-lg-2"><h6>Jelajahi</h6>${NAV.map(n=>`<a href="${n[0]}">${n[2]}</a>`).join('')}</div>
-<div class="col-6 col-lg-3"><h6>Hubungi kami</h6><p class="mb-1">Jl. Literasi No. 10, Kota Anda, Indonesia</p><p class="mb-1">halo@libraryreg.example</p><p>(021) 0000 0000</p><p class="mb-0">Sosial media: @libraryreg</p></div>
+<div class="col-6 col-lg-3"><h6>Hubungi kami</h6><p class="mb-1">Jl. Library, Surabaya, Indonesia</p><p class="mb-1">halo@libraryreg.example</p><p>(021) 0000 0000</p><p class="mb-0">Sosial media: @libraryreg</p></div>
 <div class="col-lg-3"><h6>Jam layanan</h6><div class="d-flex justify-content-between"><span>Senin–Jumat</span><span>08.00–18.00</span></div><div class="d-flex justify-content-between"><span>Sabtu–Minggu</span><span>09.00–16.00</span></div></div></div>
 <hr class="mt-4"><div class="d-flex flex-wrap justify-content-between"><span>© 2026 LibraryReg. Seluruh hak cipta dilindungi.</span><span>Aplikasi Pendaftaran Anggota Perpustakaan</span></div></div></footer>`;
 document.addEventListener('click',e=>{if(e.target.closest('.js-logout')){localStorage.removeItem(K.u);location.href='index.html'}});
