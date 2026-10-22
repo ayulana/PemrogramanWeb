@@ -102,3 +102,49 @@ Halaman ini dibuat untuk login petugas. Data petugas sudah harus diinput melalui
 
 <img width="416" height="331" alt="image" src="https://github.com/user-attachments/assets/71f6265a-7867-4f70-81eb-3e3b83979aa3" />
 <img width="453" height="342" alt="image" src="https://github.com/user-attachments/assets/24f72353-273d-4d32-b960-bf98b0078cd9" />
+
+## 4. Implementasikan dan publis web yang dibuat
+
+[**Link Deployment**](https://vercel.com/ayulana/implementasi_ets)
+
+Pada implementasi tersebut, terdapat 8 file dengan 6 file `.html`, 1 file `.css`, dan 1 file `.js`. Menggunakan teknologi HTML5, CSS3, JavaScript, Bootstrap 5, dan localStorage sebagai penyimpanan data sementara.
+
+### Struktur File Implementasi
+```
+Implementasi_WEB/
+├── index.html          
+├── tentang.html        
+├── layanan.html        
+├── pendaftaran.html    
+├── data-anggota.html   
+├── login.html          
+├── css/style.css       
+└── js/app.js           
+```
+
+### Fungsi file
+| File | Fungsi |
+|---|---|
+| [index.html](Implementasi_WEB/index.html) | Beranda: hero, statistik, koleksi, keunggulan |
+| [tentang.html](Implementasi_WEB/tentang.html) | Sejarah dan preview karya/jurnal |
+| [layanan.html](Implementasi_WEB/layanan.html) | Daftar layanan dan contact person |
+| [pendaftaran.html](Implementasi_WEB/pendaftaran.html) | Formulir pendaftaran anggota |
+| [login.html](Implementasi_WEB/login.html) | Form login petugas |
+| [data-anggota.html](Implementasi_WEB/data-anggota.html) | Tabel dan pengelolaan anggota (khusus petugas) |
+| [css/style.css](Implementasi_WEB/css/style.css) | Warna tema, kartu, footer, dan penyesuaian responsif |
+| [js/app.js](Implementasi_WEB/js/app.js) | Seluruh logika aplikasi |
+
+### Fungsi Utama di `app.js`
+
+| Fungsi / Bagian | Kegunaan |
+|---|---|
+| `db.get()` / `db.set()` | Membaca dan menyimpan data anggota (JSON) di localStorage |
+| `user()` | Mengecek apakah petugas sedang login |
+| `formHTML()` | Membuat isi formulir anggota, dipakai bersama oleh halaman Pendaftaran dan modal Tambah/Edit |
+| `validate()` | Validasi kolom wajib, format email, format nomor telepon, dan NIM/NIP unik |
+| `toast()` | Menampilkan notifikasi berhasil atau gagal |
+| `cards()` / `bars()` | Membuat kartu dan grafik batang statistik secara otomatis dari data |
+| `esc()` | Mengamankan teks agar tidak disisipi kode HTML berbahaya |
+| `P.pendaftaran` | Menyimpan anggota baru dan menangani tombol Reset Data |
+| `P.login` | Mencocokkan email, nama, dan password dengan data petugas |
+| `P['data-anggota']` | Pencarian, filter, detail, tambah, edit, dan hapus dengan dialog konfirmasi |
